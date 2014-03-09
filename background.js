@@ -7,7 +7,7 @@ if (typeof String.prototype.startsWith != 'function') {
 // Called when the url of a tab changes.
 function checkForValidUrl(tabId, changeInfo, tab) {
 	var currentUrl = tab.url;
-	if (currentUrl.startsWith("http://500px.com/photo") && !currentUrl.startsWith("http://500px.com/photos")) {
+	if (currentUrl.startsWith("https://www.uvic.ca/mypage/")) {
 		chrome.pageAction.show(tabId);
 	}
 }
