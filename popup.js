@@ -13,11 +13,9 @@ function sendMessage() {
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
     var tab = tabs[0];
     chrome.tabs.sendRequest(tab.id, {counter: 1}, function handler(response) {
-      if (response.counter == 5) {
-      	setChildTextNode("resultsRequest", "Here Goes Nothing!");
-      	console.log(response.data);
-      } else {
-        setChildTextNode("resultsRequest", "Hey There");
+      if (response.ret === 0) {
+        console.log(response.data);
+        setChildTextNode("resultsRequest","complete!");
       }
     });
   });

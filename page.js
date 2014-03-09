@@ -13,7 +13,7 @@ chrome.extension.onRequest.addListener(
    // var test = $('iframe').load(function(){ alert($(this).contents().find('body').html());});
     var frame = document.getElementsByTagName("iframe")[0].contentWindow.document.body.innerHTML
     //sendResponse({counter: 5, data: document.getElementById('u30l1n6').contentWindow.document.body.innerHTML});
-    sendResponse({counter: 5, data: frame});
+    sendResponse({ret: 0, data: frame});
     //document.getElementById('main').style.display = 'none';
 	//document.getElementById('main').style.display = 'block';
     //sendResponse({counter: 5, data: document.body.innerHTML});
