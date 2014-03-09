@@ -3,24 +3,40 @@
 	<head>
 		<title>Uvic 2 iCal</title>
 		<style>
-			tr {
-	  			white-space: nowrap;
+			body {
+				background: rgb(0,46,63);
 			}
-			.results {
-	  			text-align: right;
-	  			min-width: 6em;
-	  			color: black;
+			.full {
+	  			width: 400px;
+	  			height: 250px;
 			}
+			.full p {
+				color: rgb(255,255,255);
+			}
+			.initial {
+				display: block;
+			}
+			.final {
+				display: none;
+				background: yellow; 
+			}	
 		</style>
 	</head>
 	<body>
-		<table>
-	  		<tr>
-	    		<td><button id="sendMessage">Send Message</button></td>
-	    		<td id="resultsRequest" class="results">(results)</td>
-	  		</tr>
-		</table>
-
+		<div class="full">
+			<div class="initial">
+	    		<button id="extract_data">Do It!</button>
+	    		<p id="resultsRequest">Extract Data</p>
+	  		</div>
+	  		<div class="final" id="div_ics_download">
+	  			<button id="ics_download">Do It!</button>
+	    		<p>Download ICS file</p>
+	  		</div>
+	  		<div class="final" id="div_gmail_import">
+	  			<button id="gmail_import">Do It!</button>
+	    		<p>Google Calendar Import</p>
+	  		</div>
+		</div>
 		<script src="popup.js"></script>
 	</body>
 </html>

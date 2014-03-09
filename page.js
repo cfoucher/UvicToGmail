@@ -11,7 +11,7 @@ chrome.runtime.onConnect.addListener(function(port) {
 chrome.extension.onRequest.addListener(
   function(request, sender, sendResponse) {
    // var test = $('iframe').load(function(){ alert($(this).contents().find('body').html());});
-    var frame = document.getElementsByTagName("iframe")[0].contentWindow.document.body.innerHTML
+    var frame = document.getElementsByTagName("iframe")[0].contentWindow.document.body.innerHTML;
     //sendResponse({counter: 5, data: document.getElementById('u30l1n6').contentWindow.document.body.innerHTML});
     sendResponse({ret: 0, data: frame});
     //document.getElementById('main').style.display = 'none';
